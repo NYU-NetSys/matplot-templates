@@ -14,7 +14,8 @@ COLORS = [
     "tab:purple",
     "tab:brown",
     "tab:pink",
-    "tab:gray', 'tab:olive",
+    "tab:gray",
+    "tab:olive",
     "tab:cyan",
 ]
 plt.rcParams.update(

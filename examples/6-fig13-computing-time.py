@@ -14,7 +14,8 @@ COLORS = [
     "tab:purple",
     "tab:brown",
     "tab:pink",
-    "tab:gray', 'tab:olive",
+    "tab:gray",
+    "tab:olive",
     "tab:cyan",
 ]
 plt.rcParams.update(
@@ -66,7 +67,7 @@ def plottbl4():
         bottom=time1data,
         width=barWidth,
         hatch="xx",
-        linewidth=2,
+        linewidth=1,
         edgecolor="tab:red",
         color="none",
         label="T2",
