@@ -19,6 +19,8 @@ COLORS = [
     "tab:olive",
     "tab:cyan",
 ]
+HATCHS = ["//", "oo", "xx", "..", "\\", "+", "O", "*"]
+
 plt.rcParams.update(
     {
         "figure.figsize": (8, 4.5),
@@ -61,9 +63,9 @@ ind = np.arange(len(df))
 width = 0.3
 
 # Plot: plot data
-ax.barh(ind + 1.5 * width, df.q1, width, color="tab:blue", alpha=0.7, label="Ticket")
-ax.barh(ind + width / 2, df.q3, width, color="tab:green", alpha=0.7, label="System UI")
-ax.barh(ind - width / 2, df.q2, width, color="tab:orange", alpha=0.7, label="Workflow")
+ax.barh(ind + 1.5 * width, df.q1, width, color=COLORS[0], alpha=0.7, label="Ticket", linewidth=2)
+ax.barh(ind + width / 2, df.q3, width, color=COLORS[1], alpha=0.7, label="System UI", linewidth=2)
+ax.barh(ind - width / 2, df.q2, width, color=COLORS[2], alpha=0.7, label="Workflow", linewidth=2)
 
 ax.set(yticks=ind + width, yticklabels=df.graph, ylim=[2 * width - 1, len(df)])
 
@@ -77,7 +79,7 @@ ax.set_yticks(
 ax.set_ylabel("Score")
 ax.set_xlabel("Votes (%)")
 ax.set_xticks([0, 10, 20, 30, 40, 50])
-ax.legend(prop={"size": FONT_SIZE_SM}, draggable=True, bbox_to_anchor=(0.5, 1.1), loc="upper center", ncol=1)
+ax.legend(prop={"size": FONT_SIZE_SM}, draggable=True, bbox_to_anchor=(0.7, 1.1), loc="upper center", ncol=1)
 
 plt.tight_layout()
 plt.show()

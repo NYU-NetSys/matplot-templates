@@ -74,6 +74,7 @@ if __name__ == "__main__":
             hatch=HATCHS[idx],
             color="none",
             edgecolor=COLORS[idx],
+            linewidth=2,
             width=0.6,
             label=ydata[idx][-1],
         )

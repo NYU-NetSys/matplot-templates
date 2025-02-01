@@ -71,6 +71,7 @@ plt.bar(
     color="none",
     edgecolor="tab:green",
     align="center",
+    linewidth=2,
     alpha=0.8,
     label="Pattern1",
 )
@@ -82,6 +83,7 @@ plt.bar(
     color="none",
     edgecolor="tab:orange",
     align="center",
+    linewidth=2,
     alpha=0.8,
     label="Pattern2",
 )

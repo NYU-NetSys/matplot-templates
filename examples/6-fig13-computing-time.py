@@ -60,14 +60,14 @@ def plottbl4():
     fig, ax = plt.subplots()
     x_axis = np.arange(len(net_labels))
     plt.xticks(x_axis, net_labels, rotation=15)
-    ax.bar(x_axis, time1data, width=barWidth, hatch="//", linewidth=1, edgecolor="tab:green", color="none", label="T1")
+    ax.bar(x_axis, time1data, width=barWidth, hatch="//", linewidth=2, edgecolor="tab:green", color="none", label="T1")
     ax.bar(
         x_axis,
         [time2data[i] - time1data[i] for i in range(0, 8)],
         bottom=time1data,
         width=barWidth,
         hatch="xx",
-        linewidth=1,
+        linewidth=2,
         edgecolor="tab:red",
         color="none",
         label="T2",
